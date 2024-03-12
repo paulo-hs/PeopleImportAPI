@@ -1,0 +1,13 @@
+.vs
+API/bin
+API/obj
+Application/bin
+Application/obj
+DataBase/bin
+DataBase/obj
+Domain/bin
+Domain/obj
+MongoDB/bin
+MongoDB/obj
+UnitTests/bin
+UnitTests/obj

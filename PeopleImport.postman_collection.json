@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "eef2a20c-c036-4527-b3ae-0db8ac1b527b",
+		"name": "PeopleImport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File",
+							"contentType": "",
+							"type": "file",
+							"src": "/C:/Users/Paulo/Desktop/teste.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44396/API/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"API",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import File",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MTAyNzM4NTIsImV4cCI6MTcxMDI5MTg1MiwiaWF0IjoxNzEwMjczODUyLCJpc3MiOiJpc3MiLCJhdWQiOiJhdWQifQ.8mCFk4PGnBQjnEQNqv6TU0dWV-uhR5rHindjIpZrNkg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File",
+							"type": "file",
+							"src": "/C:/Users/Paulo/Desktop/arquivo_teste.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44396/API/import",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"API",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List ImportEvents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3MTAyNzM4NTIsImV4cCI6MTcxMDI5MTg1MiwiaWF0IjoxNzEwMjczODUyLCJpc3MiOiJpc3MiLCJhdWQiOiJhdWQifQ.8mCFk4PGnBQjnEQNqv6TU0dWV-uhR5rHindjIpZrNkg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "File",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:44396/API/import",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44396",
+					"path": [
+						"API",
+						"import"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
