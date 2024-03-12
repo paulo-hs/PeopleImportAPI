@@ -19,7 +19,7 @@ Test API
 
   1 - Faça o restore do database do mongo localizado na pasta dump;
 
-  2 - Execute o arquivo Bat enviado por e-mail para inserir as secrets do produto;
+  2 - Execute o arquivo Bat para inserir as secrets do produto;
 
   3 - Abra a IDE de preferência e execute o sistema;
 
