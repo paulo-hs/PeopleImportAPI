@@ -1,7 +1,7 @@
 # PeopleImportAPI
 Test API
 
-Requisitos
+## Requisitos
 - Desenvolver API usando Tecnologias: .NET 8, MongoDB, Bearer Token e Container Docker Linux.
 - Usar Padrão de arquitetura Hexagonal.
 - Sistema deve ter um endpoint para importar arquivos Excel(implementado csv).
@@ -13,9 +13,9 @@ Requisitos
 - Sistema deve ter Testes unitários com mock da camada de dados do produto.
 - Sistema deve ter relatorio diario dos dados processados.
 
-  Como executar o projeto:
+# Como executar o projeto:
 
-  Requisitos: MongoDb instalado e VisualStudio ou VSCode
+## Requisitos: MongoDb instalado e VisualStudio ou VSCode
 
   1 - Faça o restore do database do mongo localizado na pasta dump;
 
