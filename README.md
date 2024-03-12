@@ -13,6 +13,10 @@ Test API
 - Sistema deve ter Testes unitários com mock da camada de dados do produto.
 - Sistema deve ter relatorio diario dos dados processados.
 
+Requisitos não atingidos:
+- Relatório de dados
+- Conexão com Mongo usando Docker
+
 # Como executar o projeto:
 
 ## Requisitos: MongoDb instalado e VisualStudio ou VSCode
