@@ -23,8 +23,8 @@ Requisitos não atingidos:
 
   1 - Faça o restore do database do mongo localizado na pasta dump;
 
-  2 - Execute o arquivo Secret.Bat para inserir as secrets do produto;
+  2 - Execute o arquivo secret.Bat para inserir as secrets do produto;
 
   3 - Abra a IDE de preferência e execute o sistema;
 
-  4 - Use a collection do postman para validar as requisições;
+  4 - Use a collection do postman para validar as requisições e o arquivo csv de teste.
