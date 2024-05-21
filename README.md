@@ -1,30 +1,26 @@
 # PeopleImportAPI
 Test API
 
-## Requisitos
-- Desenvolver API usando Tecnologias: .NET 8, MongoDB, Bearer Token e Container Docker Linux.
-- Usar Padrão de arquitetura Hexagonal.
-- Sistema deve ter um endpoint para importar arquivos Excel(implementado csv).
-- Arquivo importado deve ter no minimo 10.000 itens.
-- Arquivo deve conter os seguintes campos (nome,CPF,endereço,cidade, estado, DDD e telefone).
-- Os dados extraidos do arquivo devem ser salvos no MongoDB.
-- Sistema deve ter um endpoint para consultar os status de processamento e conclusão dos eventos de importação.
-- Sistema deve gerar token para autenticação usando JWT.
-- Sistema deve ter Testes unitários com mock da camada de dados do produto.
-- Sistema deve ter relatorio diario dos dados processados.
+## Requirements
+- Develop an API using the following technologies: .NET 8, MongoDB, Bearer Token, and Linux Docker Container.
+- Use Hexagonal architecture pattern.
+- The system must have an endpoint to import Excel files (implemented as CSV).
+- The imported file must have at least 10,000 items.
+- The file must contain the following fields: name, CPF, address, city, state, area code, and phone number.
+- The data extracted from the file must be saved in MongoDB.
+- The system must have an endpoint to check the processing status and completion of import events.
+- The system must generate a token for authentication using JWT.
+- The system must have unit tests with mocking of the product data layer.
+- The system must generate a daily report of the processed data.
 
-Requisitos não atingidos:
-- Relatório de dados
-- Conexão com Mongo usando Docker
+# How to run the project:
 
-# Como executar o projeto:
+## Prerequisites: MongoDB installed and Visual Studio or VSCode
 
-## Requisitos: MongoDb instalado e VisualStudio ou VSCode
+1. Restore the MongoDB database located in the dump folder.
 
-  1 - Faça o restore do database do mongo localizado na pasta dump;
+2. Run the secret.Bat file to insert the product secrets.
 
-  2 - Execute o arquivo secret.Bat para inserir as secrets do produto;
+3. Open your preferred IDE and run the system.
 
-  3 - Abra a IDE de preferência e execute o sistema;
-
-  4 - Use a collection do postman para validar as requisições e o arquivo csv de teste.
+4. Use the Postman collection to validate the requests and the test CSV file.
