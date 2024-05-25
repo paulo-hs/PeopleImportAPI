@@ -40,7 +40,7 @@ namespace Adapter.MongoDB
 
         public void UpdateImportEventStatus(ImportEvent importEvent)
         {
-            var filter = Builders<ImportEvent>.Filter.Eq(e => e.Id, importEvent.Id); // Filtro para encontrar o documento a ser atualizado
+            var filter = Builders<ImportEvent>.Filter.Eq(e => e.Id, importEvent.Id);
             var update = Builders<ImportEvent>.Update.Set(e => e.Status, importEvent.Status);
             _collection.UpdateOne(filter, update);
         }

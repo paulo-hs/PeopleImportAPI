@@ -1,20 +1,15 @@
 ﻿using Application.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Xunit.Sdk;
 
 namespace UnitTests
 {
-    public class ExcelReadServiceTest
+    public class CSVReadServiceTest
     {
-        private ExcelReadService _excelReadService;
+        private CSVReadService _csvReadService;
 
-        public ExcelReadServiceTest()
+        public CSVReadServiceTest()
         {
-            _excelReadService = new ExcelReadService();
+            _csvReadService = new CSVReadService();
         }
 
         private byte[] mockFile() { 
@@ -47,48 +42,48 @@ namespace UnitTests
         public void ValidFile_LoadFile_ShouldFillLines()
         {
             string fileName = "Test";
-            _excelReadService.Load(mockFile(), fileName);
+            _csvReadService.Load(mockFile(), fileName);
 
-            Assert.Equal(101, _excelReadService.Lines.Count());
-            Assert.Equal(fileName, _excelReadService.FileName);
+            Assert.Equal(101, _csvReadService.Lines.Count());
+            Assert.Equal(fileName, _csvReadService.FileName);
         }
 
         [Fact]
         public void EmptyFile_LoadFile_ShouldHaveEmptyLines()
         {
             string fileName = "Test";
-            _excelReadService.Load(mockFileEmpty(), fileName);
+            _csvReadService.Load(mockFileEmpty(), fileName);
 
-            Assert.Equal(0, _excelReadService.Lines.Count());
-            Assert.Equal(fileName, _excelReadService.FileName);
+            Assert.Equal(0, _csvReadService.Lines.Count());
+            Assert.Equal(fileName, _csvReadService.FileName);
         }
 
         [Fact]
         public void ValidFile_CountLines_ShouldReturn101()
         {
             string fileName = "Test";
-            _excelReadService.Load(mockFile(), fileName);
+            _csvReadService.Load(mockFile(), fileName);
 
-            Assert.Equal(101, _excelReadService.CountLines());
-            Assert.Equal(fileName, _excelReadService.FileName);
+            Assert.Equal(101, _csvReadService.CountLines());
+            Assert.Equal(fileName, _csvReadService.FileName);
         }
 
         [Fact]
         public void ValidFile_ValidateSchema_ShouldReturnTrue()
         {
             string fileName = "Test";
-            _excelReadService.Load(mockFile(), fileName);
+            _csvReadService.Load(mockFile(), fileName);
 
-            Assert.True(_excelReadService.ValidateSchema());
+            Assert.True(_csvReadService.ValidateSchema());
         }
 
         [Fact]
         public void EmptyFile_ValidateSchema_ShouldReturnFalse()
         {
             string fileName = "Test";
-            _excelReadService.Load(mockFileInvalid(), fileName);
+            _csvReadService.Load(mockFileInvalid(), fileName);
 
-            Assert.False(_excelReadService.ValidateSchema());
+            Assert.False(_csvReadService.ValidateSchema());
         }
     }
 }

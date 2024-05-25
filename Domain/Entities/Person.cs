@@ -21,16 +21,6 @@ namespace Domain.Entities
         public string DDD { get; set; }
         public string Telefone { get; set; }
 
-        public Person(string nome, string cPF, string endereco, string cidade, string estado, string dDD, string telefone)
-        {
-            Nome = nome;
-            CPF = cPF;
-            Endereco = endereco;
-            Cidade = cidade;
-            Estado = estado;
-            DDD = dDD;
-            Telefone = telefone;
-        }
         public Person(string[] fields)
         {
             Nome = fields[0];

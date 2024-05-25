@@ -18,7 +18,7 @@ public static class ServiceApplicationExtensions
         services.AddScoped<IDataBasePersonService, Adapter.MongoDB.PersonService>();
         services.AddScoped<IDataBaseImportEventService, Adapter.MongoDB.ImportEventService>();
         services.AddScoped<IImportService, ImportService>();
-        services.AddTransient<IFileReadService, ExcelReadService>();        
+        services.AddTransient<IFileReadService, CSVReadService>();        
         return services;
     }
 }

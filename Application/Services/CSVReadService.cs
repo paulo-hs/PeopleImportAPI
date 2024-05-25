@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class ExcelReadService : Domain.Interfaces.IFileReadService
+    public class CSVReadService : Domain.Interfaces.IFileReadService
     {
         private List<string> _lines = new List<string>();
         private string _fileName = string.Empty;
